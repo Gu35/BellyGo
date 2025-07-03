@@ -1,140 +1,121 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BellyGo</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Pretendard', sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #222;
-      padding: 10px 0;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1600891963935-c3d57b53c187');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    .categories {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 30px auto;
-      max-width: 960px;
-    }
-    .categories button {
-      background-color: #eee;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .restaurant-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 960px;
-      margin: 0 auto 50px;
-      padding: 0 20px;
-    }
-    .restaurant {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .restaurant img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .restaurant-info {
-      padding: 15px;
-    }
-    .restaurant-info h3 {
-      margin: 0 0 10px;
-      font-size: 1.2em;
-    }
-    footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-  </style>
+  <title>점심리스트</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>BellyGo</h1>
-    <p>회사 주변 맛집 기록 프로젝트</p>
-  </header>
-  <nav>
-    <a href="#">전체</a>
-    <a href="#">한식</a>
-    <a href="#">중식</a>
-    <a href="#">양식</a>
-    <a href="#">일식</a>
-  </nav>
-  <div class="hero">
-    <h1>오늘 뭐 먹지?</h1>
-    <p>회사 근처 와인집부터 분식까지, 다 기록해!</p>
-  </div>
-  <div class="categories">
-    <button>전체</button>
-    <button>한식</button>
-    <button>양식</button>
-    <button>중식</button>
-    <button>일식</button>
-    <button>기타</button>
-  </div>
-  <div class="restaurant-list">
-    <div class="restaurant">
-      <img src="https://images.unsplash.com/photo-1606788075761-456a5fa8939b" alt="레스토랑 사진">
-      <div class="restaurant-info">
-        <h3>청담와인바</h3>
-        <p>분위기 좋은 와인집 / 서울 강남구 / 일요일 휴무</p>
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-bg-right"></div>
+    <h1 class="hero-title">아무거나 못 먹어</h1>
+    <p class="hero-subtitle">어차피 먹어야 할 거,<br>맛있게 먹는 게 맞잖아?</p>
+  </section>
+
+  <!-- 2. Explore Section -->
+  <section class="explore">
+    <div class="explore-bg"></div>
+    <img src="images/explore.jpg" alt="자주 가는 곳" class="explore-image">
+    <div class="explore-card">
+      <h2>자주 가는 곳,<br>가보려던 곳</h2>
+      <p>솔직히 말하면<br>그냥 좋아서 모았어요</p>
+      <a href="#quick" class="btn small">더 보기</a>
+    </div>
+  </section>
+
+  <!-- 3. Quick Section -->
+  <section id="quick" class="quick">
+    <div class="quick-header">
+      <h2>회사 앞<br>10분 컷</h2>
+      <p>배고픔은 급한데, 멀면 안 가잖아?<br>회사 근처 맛집만 골랐어요</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="images/온센.jpg" alt="온센">
+        <h3>온센</h3>
+        <p>튀김•우동•카레까지<br>다 되는 일본식 한 끼</p>
+      </div>
+      <div class="card">
+        <img src="images/스시초바.jpg" alt="스시초바">
+        <h3>스시이츠바</h3>
+        <p>푸짐하지만 흐트러짐<br>없는 정갈한 구성</p>
+      </div>
+      <div class="card">
+        <img src="images/탐롱.jpg" alt="탐롱">
+        <h3>탐롱</h3>
+        <p>정통 베트남의<br>담백하고 깊은 맛</p>
       </div>
     </div>
-    <div class="restaurant">
-      <img src="https://images.unsplash.com/photo-1523987355523-c7b5b42b76d4" alt="레스토랑 사진">
-      <div class="restaurant-info">
-        <h3>을지로골뱅이</h3>
-        <p>골뱅이무침 + 맥주 / 서울 중구 / 월요일 휴무</p>
+  </section>
+
+  <!-- 4. Scale Section -->
+  <section class="scale">
+    <div class="scale-text">
+      <h2>가볍게<br>거하게</h2>
+      <p>샐러드로 입가심할 수도 있고,<br>스테이크로 기분 낼 수도 있죠</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="images/그린엘리.jpg" alt="그린엘리">
+        <h3>그린엘리</h3>
+        <p>과하지 않지만<br>부족하지도 않은 점심</p>
+      </div>
+      <div class="card">
+        <img src="images/그린엘리.jpg" alt="그린엘리">
+        <h3>그린엘리</h3>
+        <p>과하지 않지만<br>부족하지도 않은 점심</p>
+      </div>
+      <div class="card">
+        <img src="images/그린엘리.jpg" alt="그린엘리">
+        <h3>그린엘리</h3>
+        <p>과하지 않지만<br>부족하지도 않은 점심</p>
+      </div>
+      <div class="card">
+        <img src="images/그린엘리.jpg" alt="그린엘리">
+        <h3>그린엘리</h3>
+        <p>과하지 않지만<br>부족하지도 않은 점심</p>
       </div>
     </div>
-    <!-- 더 많은 식당은 여기 추가 -->
-  </div>
-  <footer>
-    &copy; 2025 BellyGo. 식당 정보는 직접 기록한 내용입니다.
-  </footer>
+  </section>
+
+  <!-- 5. Choose Section -->
+  <section class="choose">
+    <div class="choose-header">
+      <h2>뭘 좋아할지<br>몰라서</h2>
+      <p>한식부터 아시안까지 전부 챙겼어요<br>오늘 입맛은 스스로도 모르잖아요?</p>
+      <a href="#" class="btn small">여기부터 시작</a>
+    </div>
+    <div class="categories">
+      <div class="cat">한식
+        <p>설명</p></div>
+      <div class="cat">중식</div>
+      <div class="cat">일식</div>
+      <div class="cat">양식</div>
+      <div class="cat">기타</div>
+    </div>
+  </section>
+
+  <!-- 6. Mood Section -->
+  <section class="mood">
+    <img src="images/mood.jpg" alt="무드 이미지" class="mood-image">
+    <div class="mood-text">
+      <h2>회사 근처,<br>생각보다 괜찮아</h2>
+      <p>잘 안보일 뿐이지<br>찾아보면 진짜 많아</p>
+    </div>
+  </section>
+
+  <!-- 7. Insight Section -->
+  <section class="insight">
+    <div class="insight-image"></div>
+    <div class="insight-container">
+      <div class="insight-card">
+        <h2>뭘 좋아할지 몰라서</h2>
+        <p>혼밥도, 소모임도, 모임도<br>모두를 위한 메뉴가 여기 다 모였다!</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

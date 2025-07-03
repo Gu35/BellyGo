@@ -1,0 +1,214 @@
+/* 기본 폰트 및 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 공통 버튼 */
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 1em;
+}
+.btn.small {
+  font-size: 0.8rem;
+  padding: 0.4em 1em;
+}
+
+/* 1. Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: white;
+  text-align: center;
+  padding: 160px 20px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* 2. Explore Section */
+.explore {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.explore-image {
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  border-radius: 12px;
+}
+.explore-card h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+.explore-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* 3. Quick Section */
+.quick {
+  padding: 80px 20px;
+}
+.quick-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.quick-header h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.quick-header p {
+  color: #666;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.card p {
+  font-size: 0.9rem;
+  color: #777;
+  padding: 0 0.8rem 1rem;
+}
+
+/* 4. Scale Section */
+.scale {
+  padding: 80px 20px;
+  background-color: #f0f4f7;
+}
+.scale-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.scale-text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.scale-text p {
+  color: #666;
+}
+
+/* 5. Choose Section */
+.choose {
+  padding: 80px 20px;
+}
+.choose-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.choose-header h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.cat {
+  padding: 0.6em 1.4em;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cat:hover {
+  background-color: #e8f5e9;
+  border-color: #4CAF50;
+}
+
+/* 6. Mood Section */
+.mood {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 80px 20px;
+}
+.mood-image {
+  flex: 1 1 300px;
+  border-radius: 12px;
+}
+.mood-text {
+  flex: 1 1 300px;
+}
+.mood-text h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.mood-text p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* 7. Insight Section */
+.insight {
+  background-color: #fdfdfd;
+  padding: 80px 20px;
+  text-align: center;
+}
+.insight-card h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.insight-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
